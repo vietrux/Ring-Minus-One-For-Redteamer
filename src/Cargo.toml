@@ -4,7 +4,7 @@ resolver = "2"
 
 [workspace.package]
 version = "0.1.0"
-edition = "2026"
+edition = "2024"
 authors = ["Viet Trung <leviettrung.social@gmail.com>"]
 description = "A minimalistic hypervisor for Windows on Intel processors"
 license = "MIT"

@@ -284,9 +284,7 @@ fn initialize_control_fields() {
         );
         vmwrite_control(
             vmcs::control::SECONDARY_PROCBASED_EXEC_CONTROLS,
-            (vmcs::control::SecondaryControls::ENABLE_RDTSCP
-                | vmcs::control::SecondaryControls::ENABLE_XSAVES_XRSTORS)
-                .bits(),
+            vmcs::control::SecondaryControls::ENABLE_RDTSCP.bits(),
         );
     };
 }
@@ -407,7 +405,7 @@ fn handle_cpuid(guest: &mut Registers) {
 
     // We somehow need to emulate CPUID instruction by returning EAX, EBX, ECX,
     // and EDX according to RAX and RCX (leaf and sub leaf).
-    unimplemented!("it is your first exercise :)");
+    unimplemented!("TODO: Emulate CPUID instruction");
 
     //guest.rax = result_eax;
     //guest.rbx = result_ebx;
